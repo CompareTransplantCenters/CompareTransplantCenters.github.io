@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Compare Transplant Centers</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600|Source+Code+Pro" rel="stylesheet" />
+		<!--[if lte IE 8]><script src="html5shiv.js" type="text/javascript"></script><![endif]-->
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<script src="js/jquery.dropotron.min.js"></script>		
+		<script src="skel.min.js">
+		{
+			prefix: 'css/style',
+			preloadStyleSheets: true,
+			resetCSS: true,
+			boxModel: 'border',
+			grid: { gutters: 30 },
+			breakpoints: {
+				wide: { range: '1200-', containers: 1140, grid: { gutters: 50 } },
+				narrow: { range: '481-1199', containers: 960 },
+				mobile: { range: '-480', containers: 'fluid', lockViewport: true, grid: { collapse: true } }
+			}
+		}
+		</script>
+		<script>
+			$(function() {
+
+				// Note: make sure you call dropotron on the top level <ul>
+				$('#main-nav > ul').dropotron({ 
+					offsetY: -10 // Nudge up submenus by 10px to account for padding
+				});
+
+			});
+		</script>
+		<script>
+			// DOM ready
+			$(function() {
+    
+			// Create the dropdown base
+			$("<select />").appendTo("nav");
+   
+			// Create default option "Go to..."
+			$("<option />", {
+				"selected": "selected",
+				"value"   : "",
+				"text"    : "Menu"
+			}).appendTo("nav select");
+   
+			// Populate dropdown with menu items
+			$("nav a").each(function() {
+			var el = $(this);
+			$("<option />", {
+				"value"   : el.attr("href"),
+				"text"    : el.text()
+			}).appendTo("nav select");
+			});
+   
+			// To make dropdown actually work
+			// To make more unobtrusive: http://css-tricks.com/4064-unobtrusive-page-changer/
+			$("nav select").change(function() {
+				window.location = $(this).find("option:selected").val();
+			});
+  
+			});
+		</script>	
+	</head>
+	<body>
+		<div id="header_container">		
+		    <div class="container">
+			<!-- Header -->
+				<div id="header" class="row">
+					<div class="4u">
+						<h1>Compare Transplant Centers</h1>
+						<h2>Critical information for critical patients</h2>
+					</div>
+					
+					<nav id="main-nav" class="8u">
+						<ul>
+							<li><a class="active" href="index.html">Home</a></li>
+							<li><a href="services.html">Services</a></li>
+							<li><a href="testimonials.html">Testimonials</a></li>
+							<li><a href="about.html">About</a></li>							
+							<li><a href="contact.php">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>	
+        </div>		
+
+		<div id="site_content">
+			<div class="container">			
+			
+			<!-- Banner -->		
+				<div id="banner">
+					<a href="#"><img src="images/banner.png" alt="banner image" /></a>
+				</div>
+				
+			<!-- Features -->
+				<div class="row">
+					<section class="8u">
+						<h1>The National Waiting List has 120,000+ people and continues to grow exponentially</h1>
+						<p>	4,000 new patients added every year and only 28,000 annual transplant surgeries, steady since 2005. So you must get even sicker to near the top of the Waiting List to be considered for transplant. Compare Transplant Centers reviews your personal situation to give unbiased and strategic comparisons of all the transplant centers within your reach.</p>
+						<p>We provide the following statistics on all transplant centers of interest:</p>
+						<ul>
+							<li>the very latest Wait List numbers in any blood type, broken down by MELD ranges, per hospital, OPO and Region</li>
+							<li>most current available 1 year Survival statistic percentages, per hospital</li>
+							<li>recent MELD-at-Transplant percentages, identifying the hospital’s “sweet spot” of transplant probability</li>
+							<li>specific to your liver disease, highlight each hospital’s transplant history by current year and number to date</li>
+						</ul>
+						<p></p>
+						<p>	Additionally, we offer multi-listing recommendations at transplant centers in other Organ Procurements Organizations (OPOs) and other Regions, if at all possible, for a final catch-all. We will research all the possibilities for your exact situation to give the best transplant center recommendation/s and possible pairings, based on SRTR and OPTN statistical data and best strategic practices, utilizing UNOS policies and guidelines.</p>
+						<p>	In a world of organ shortages, we give families the power of analytical and strategic information to make wise and proactive decisions to get patients to transplant sooner for best possible outcome. Although “waiting” is never easy, having the best groundwork put together enables your family to focus on health stability and enjoying life together.</p>
+						<p>Here’s a partial snippet of the comparative report:</p>
+						<img src="images/example.png" />
+						<p>We’ll finish with a comprehensive discussion together, highlighting each of the transplant centers with strategic advantages, including pairings with other excellent centers to double and triple your odds of getting a liver well ahead of time.</p>
+					</section>
+
+					
+					<section class="4u">
+						<div id="sidebar">
+							<section class="12u">
+								<h3>Latest News</h3>
+								<h4>New Website Launched</h4>
+								<h5>February 1st, 2014</h5>
+								<p>2014 sees the redesign of our website. <a href="#">Read more</a></p>
+							</section>
+							<section class="12u">
+								<h3>Useful Links</h3>
+								<ul>
+									<li><a href="#">First Link</a></li>
+									<li><a href="#">Another Link</a></li>
+									<li><a href="#">And Another</a></li>
+									<li><a href="#">Last One</a></li>
+								</ul>
+							</section>
+						</div>
+					</section>
+					
+				</div>
+			</div>
+        </div>		
+		
+		<div id="footer_container">
+			<div class="container">			
+			<!-- Footer -->
+				<footer>
+					<p><img src="images/twitter.png" alt="twitter" />&nbsp;<img src="images/facebook.png" alt="facebook" />&nbsp;<img src="images/rss.png" alt="rss" /></p>
+					<p><a href="index.html">Home</a> | <a href="examples.html">Examples</a> | <a href="apage.html">A Page</a> | <a href="anotherpage.html">Another Page</a> | <a href="contact.php">Contact Us</a></p>
+					<p>Copyright &copy; CSS3_responsive | <a href="http://skeljs.org/">skel.js</a> | <a href="http://www.css3templates.co.uk">design from css3templates.co.uk</a></p>
+				</footer>		
+			</div>
+        </div>		
+	</body>
+</html>
